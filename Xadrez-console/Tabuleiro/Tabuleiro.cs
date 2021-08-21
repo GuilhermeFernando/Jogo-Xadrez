@@ -20,7 +20,7 @@
         }
 
         public Peca peca(Posicao pos)
-        {
+        { 
             return pecas[pos.Linha, pos.Coluna];
 
         }
@@ -33,6 +33,10 @@
 
         public void colocarPeca(Peca p, Posicao pos)
         {
+            if(existePeca(pos))
+            {
+                throw new TabuleiroException("Ja existe uma peça nesta posição");
+            }
             pecas[pos.Linha, pos.Coluna] = p;
             p.posicao = pos;
         }
