@@ -22,7 +22,6 @@
         {
             Linha = linha;
             Coluna = coluna;
-
         }
     }
 }
